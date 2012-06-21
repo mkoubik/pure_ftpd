@@ -1,0 +1,11 @@
+MySQLServer           <%= @mysql_server %>
+MySQLPort             <%= @mysql_port %>
+MYSQLUser             <%= @mysql_user %>
+MYSQLPassword         <%= @mysql_password %>
+MYSQLDatabase         <%= @mysql_database %>
+MYSQLCrypt            cleartext
+MYSQLGetPW      SELECT password FROM ftpd_users WHERE username="\L"
+MYSQLGetUID     SELECT uid FROM ftpd_users WHERE username="\L"
+MYSQLGetGID     SELECT gid FROM ftpd_users WHERE username="\L"
+MYSQLGetDir     SELECT dir FROM ftpd_users WHERE username="\L"
+
