@@ -23,7 +23,7 @@ end
 end
 
 file "/etc/pure-ftpd/conf/ForcePassiveIP" do
-  content node.has_attribute?("ec2") ? node[:ec2][:public_ipv4] : node[:ipaddress]
+  content node[:ec2] ? node[:ec2][:public_ipv4] : node[:ipaddress]
 end
 
 file "/etc/pure-ftpd/conf/PassivePortRange" do
